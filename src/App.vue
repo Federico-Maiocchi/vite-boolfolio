@@ -1,6 +1,6 @@
 <script >
 
-import ProjectIndex from './views/project/index.vue';
+import ProjectIndex from './views/project/Index.vue';
 
 
 export default {
@@ -36,7 +36,7 @@ export default {
 
 <template>
   <h1>CIao mondo</h1>
-  <ProjectIndex />
+  <ProjectIndex/>
 </template>
 
 <style lang="scss">
