@@ -16,10 +16,10 @@ export default {
     methods: {
 
         fetchProject() {
-                axios.get(`${this.BASE_URL}/posts/${this.slug}`)
+                axios.get(`${this.BASE_URL}/projects/${this.slug}`)
                 .then((res) => {
                     console.log(res)
-                    this.projects = res.data.results.data
+                    this.project = res.data.project
                 })
         }
        
@@ -29,7 +29,7 @@ export default {
     // const slug = this.$route.params.slug
     // console.log('rotta:',this.$route)
     // console.log(slug)
-    this.fetchPost()
+    this.fetchProject()
     }
 
 
@@ -39,9 +39,21 @@ export default {
 
 <template>
     <h1>Sezione SHOW - Projects/Show.vue</h1>
-    <div>
+    <div v-if="project">
+        <div class="container">
+        <h1>{{  project.title }}</h1>
+        <p>{{ project.slug }}</p>
+        <!-- <p >{{ project.type?.name }}</p> -->
+        <!-- <ul class="tags">
+            <li v-for="tag in post.tags" :key="tag.id">
+            {{ tag.name }}
+            </li>
+        </ul> -->
+        </div>
 
-    </div>
+        <div class="container" v-html="project.content">
+        </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
