@@ -49,10 +49,13 @@ export default {
                 </div>
                 <p class="mb-2"><span class="text-bold">Img:</span> {{ itemProject.img }}</p>
                 <p><span class="text-bold">Descrizione:</span> {{ itemProject.description }}</p>
+                <p>
+                    <router-link :to="{ name: 'projects.show', params: { slug: itemProject.slug } }">Info</router-link>
+                </p>
             </div>      
         </div>
     </div>
-    
+
 </template>
 
 <style lang="scss" scoped>
