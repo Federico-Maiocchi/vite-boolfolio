@@ -21,6 +21,7 @@ const router = createRouter ({
         {
             path: '/portfolio/:slug',
             name: 'projects.show',
+            props:true,
             component: ProjectShow
 
         },

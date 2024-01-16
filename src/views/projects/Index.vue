@@ -22,7 +22,7 @@ export default {
                     console.log(res)
                     this.projects = res.data.results.data
                 })
-            }
+        }
     },
 
     created() {
