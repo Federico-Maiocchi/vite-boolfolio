@@ -3,6 +3,7 @@ import axios from 'axios';
 import ProjectCard from '../../components/ProjectCard.vue'
 
 export default {
+    
     components: {
     
         ProjectCard,
@@ -12,9 +13,7 @@ export default {
     data() {
         return {
             projects:[],
-            BASE_URL: 'http://127.0.0.1:8000/api'
-           
-            
+            BASE_URL: 'http://127.0.0.1:8000/api'     
         };
     },
 
@@ -23,7 +22,7 @@ export default {
                 axios.get(`${this.BASE_URL}/projects`)
                 .then((res) => {
                     console.log(res)
-                    this.projects = res.data.results
+                    this.projects = res.data.results.data
                 })
             }
     },
@@ -45,11 +44,10 @@ export default {
 
     <div class="container">
         <div class="row">
-            <ProjectCard class="col-4" 
+            <ProjectCard 
             v-for="project in projects" 
             :key="project.id" 
-            :itemProject="project" />
-                 
+            :itemProject="project" />         
         </div>
     </div>
 
@@ -57,7 +55,9 @@ export default {
 
 <style lang="scss" scoped>
 
-
+.row {
+    height: 100%;
+}
 
 
 </style>

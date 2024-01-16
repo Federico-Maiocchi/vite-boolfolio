@@ -25,8 +25,6 @@ export default {
     
   },
 
-
-
   mounted() {
       
   }
@@ -35,8 +33,9 @@ export default {
 </script>
 
 <template>
-  <h1>CIao mondo</h1>
+  <h1>Boolfolio</h1>
   <ProjectIndex/>
+  <route-view></route-view>
 </template>
 
 <style lang="scss">

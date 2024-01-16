@@ -34,6 +34,7 @@ export default {
 </script>
 
 <template>
+
     <div class="col-4">
         <div class="card-project">
             <div class="card-head">
@@ -48,12 +49,10 @@ export default {
                 </div>
                 <p class="mb-2"><span class="text-bold">Img:</span> {{ itemProject.img }}</p>
                 <p><span class="text-bold">Descrizione:</span> {{ itemProject.description }}</p>
-            </div>
-            
-            
-            
+            </div>      
         </div>
     </div>
+    
 </template>
 
 <style lang="scss" scoped>
