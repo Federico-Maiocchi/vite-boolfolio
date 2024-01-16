@@ -1,13 +1,10 @@
 <script >
 
-import ProjectIndex from './views/project/Index.vue';
+import ProjectIndex from './views/project/index.vue'
 
 
 export default {
-  components: {
-    ProjectIndex
-
-  },
+  
 
   data() {
       return {
@@ -33,9 +30,9 @@ export default {
 </script>
 
 <template>
-  <h1>Boolfolio</h1>
-  <ProjectIndex/>
-  <route-view></route-view>
+  
+  <router-view></router-view>
+
 </template>
 
 <style lang="scss">
