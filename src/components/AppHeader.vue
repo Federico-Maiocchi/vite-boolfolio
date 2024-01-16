@@ -6,6 +6,7 @@
 <template>
 
     <header>
+        
         <div class="container">
             <nav>
                 <ul>
@@ -13,12 +14,15 @@
                         <router-link :to="{ name: 'home' }">Home</router-link>
                     </li>
                     <li>
-                        <router-link :to="{ name: 'projects.index' }">Portfoliorlink in </router-link>
+                        <router-link :to="{ name: 'projects.index' }">Portfolio</router-link>
                     </li>
-                    <li></li>
+                    <li>
+                        <router-link :to="{ name: 'contacts' }">Contatti</router-link>
+                    </li>
                 </ul>
             </nav>
         </div>
+        
     </header>
     
 </template>

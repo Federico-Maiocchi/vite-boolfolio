@@ -8,7 +8,7 @@ export default {
     },
 
     mounted() {
-        console.log('home page montato')
+        // console.log('home page montato')
     }
 
 
@@ -17,6 +17,7 @@ export default {
 </script>
 
 <template>
+    <h1>HomePage</h1>
     <div class="container">
         <h1> {{ title }} </h1>
         <h2> {{ jobTitle }} </h2>

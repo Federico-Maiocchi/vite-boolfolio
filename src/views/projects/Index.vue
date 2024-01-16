@@ -31,14 +31,14 @@ export default {
     
 
     mounted() {
-        console.log('projects.index montato')
+        // console.log('projects.index montato')
     }
 }
 
 </script>
 
 <template>
-    <h2>Index.vue prova</h2>
+    <h1>Portfolio</h1>
 
     <div class="container">
         <div class="row">
