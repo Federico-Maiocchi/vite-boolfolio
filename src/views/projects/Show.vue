@@ -45,26 +45,42 @@ export default {
 
 <template>
     <h1>Sezione SHOW - Projects/Show.vue</h1>
+
     <div v-if="project">
 
         <div class="container">
-            <h1>{{  project.title }}</h1>
-            <p>{{ project.slug }}</p>
-            <p >{{ project.type?.name }}</p>
-            <ul class="tags">
-                <li v-for="technology in project.technologies" :key="technology.id">
-                {{ technology.name }}
-                </li>
-            </ul>
-        
+            <div class="card-show">
+                <h1 class="mb-2">Titolo: {{  project.title }}</h1>
+                <p class="mb-2">Slug: {{ project.slug }}</p>
+                <p class="mb-2">Type: {{ project.type?.name }}</p>
+                <div class="row tech mb-2">
+                    <p class="col-3 " v-for="technology in project.technologies" :key="technology.id">
+                        {{ technology.name }}
+                    </p>  
+                </div>
+                <div class="mb-2">Immagine: {{ project.img }} </div>
+                <div class="container mb-2" v-html="project.description">
+                    
+                </div>
+            </div>
+           
         </div>
-    </div>
-
-    
-
-    
+    </div>   
 </template>
 
 <style lang="scss" scoped>
+
+.card-show {
+    border: 2px solid black;
+    padding: 10px
+
+}
+
+.tech {
+    border: 1px solid black;
+    padding: 4px;
+    
+}
+
 
 </style>
