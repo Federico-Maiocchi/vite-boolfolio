@@ -12,8 +12,8 @@ const router = createRouter ({
             component: Homepage
         },
         {
-            path: '/blog',
-            name: '/projects.index',
+            path: '/portfolio',
+            name: 'projects.index',
             component: ProjectIndex
         }
 
@@ -21,3 +21,5 @@ const router = createRouter ({
 }) 
 
 export { router }
+
+

@@ -5,9 +5,7 @@ import ProjectCard from '../../components/ProjectCard.vue'
 export default {
     
     components: {
-    
         ProjectCard,
-    
     },
 
     data() {
@@ -33,7 +31,7 @@ export default {
     
 
     mounted() {
-        
+        console.log('projects.index montato')
     }
 }
 

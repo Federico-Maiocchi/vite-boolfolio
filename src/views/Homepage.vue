@@ -5,7 +5,13 @@ export default {
             title: 'Federico',
             jobTitle: 'Developer'
         }
+    },
+
+    mounted() {
+        console.log('home page montato')
     }
+
+
 }
 
 </script>

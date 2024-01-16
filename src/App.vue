@@ -1,10 +1,13 @@
 <script >
 
-import ProjectIndex from './views/projects/index.vue'
+
+import AppHeader from './components/AppHeader.vue'
 
 
 export default {
-  
+  components: {
+    AppHeader
+  },
 
   data() {
       return {
@@ -30,7 +33,7 @@ export default {
 </script>
 
 <template>
-  
+  <AppHeader/>
   <router-view></router-view>
 
 </template>
