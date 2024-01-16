@@ -22,7 +22,7 @@ export default {
                 this.project = res.data.project
                 
             }).catch((error) => {
-                console.log('project not found',error.response)
+                // console.log('project not found',error.response)
 
                 if(error.response.status === 404) {
                     this.$router.push({ name: 'not-found' })
@@ -52,7 +52,7 @@ export default {
             <div class="card-show">
                 <h1 class="mb-2">Titolo: {{  project.title }}</h1>
                 <p class="mb-2">Slug: {{ project.slug }}</p>
-                <p class="mb-2">Type: {{ project.type?.name }}</p>
+                <p class="mb-2">Type: {{ project.type.name ?? '/' }}</p>
                 <div class="row tech mb-2">
                     <p class="col-3 " v-for="technology in project.technologies" :key="technology.id">
                         {{ technology.name }}

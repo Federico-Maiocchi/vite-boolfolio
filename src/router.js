@@ -2,8 +2,9 @@ import { createRouter, createWebHistory} from 'vue-router';
 
 import Homepage from './views/Homepage.vue';
 import ProjectIndex from './views/projects/Index.vue';
-import Contact from './views/Contact.vue'
-import ProjectShow from './views/projects/Show.vue'
+import Contact from './views/Contact.vue';
+import ProjectShow from './views/projects/Show.vue';
+import NotFound from './views/404.vue';
 
 const router = createRouter ({
     history: createWebHistory(),
@@ -30,6 +31,12 @@ const router = createRouter ({
             name: 'contacts',
             component: Contact
         },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'not-found',
+            component: NotFound
+
+        }
         
 
     ]
