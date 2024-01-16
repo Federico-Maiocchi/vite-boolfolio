@@ -9,20 +9,26 @@ export default {
     data() {
         return {
             BASE_URL: 'http://127.0.0.1:8000/api',
-            post: null,
+            project: null,
         }
     },
 
     methods: {
 
         fetchProject() {
-                axios.get(`${this.BASE_URL}/projects/${this.slug}`)
-                .then((res) => {
-                    console.log(res)
-                    this.project = res.data.project
-                })
+            axios.get(`${this.BASE_URL}/projects/${this.slug}`)
+            .then((res) => {
+                console.log(res)
+                this.project = res.data.project
+                
+            }).catch((error) => {
+                console.log('project not found',error.response)
+
+                if(error.response.status === 404) {
+                    this.$router.push({ name: 'not-found' })
+                }
+            })  
         }
-       
     },
 
     created() {
@@ -40,20 +46,23 @@ export default {
 <template>
     <h1>Sezione SHOW - Projects/Show.vue</h1>
     <div v-if="project">
-        <div class="container">
-        <h1>{{  project.title }}</h1>
-        <p>{{ project.slug }}</p>
-        <!-- <p >{{ project.type?.name }}</p> -->
-        <!-- <ul class="tags">
-            <li v-for="tag in post.tags" :key="tag.id">
-            {{ tag.name }}
-            </li>
-        </ul> -->
-        </div>
 
-        <div class="container" v-html="project.content">
+        <div class="container">
+            <h1>{{  project.title }}</h1>
+            <p>{{ project.slug }}</p>
+            <p >{{ project.type?.name }}</p>
+            <ul class="tags">
+                <li v-for="technology in project.technologies" :key="technology.id">
+                {{ technology.name }}
+                </li>
+            </ul>
+        
         </div>
-  </div>
+    </div>
+
+    
+
+    
 </template>
 
 <style lang="scss" scoped>
