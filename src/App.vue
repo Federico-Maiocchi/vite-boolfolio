@@ -1,6 +1,6 @@
 <script >
 
-import ProjectIndex from './views/project/index.vue'
+import ProjectIndex from './views/projects/index.vue'
 
 
 export default {
