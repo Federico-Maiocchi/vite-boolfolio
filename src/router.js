@@ -5,6 +5,7 @@ import ProjectIndex from './views/projects/Index.vue';
 import Contact from './views/Contact.vue';
 import ProjectShow from './views/projects/Show.vue';
 import NotFound from './views/404.vue';
+import TypeArchive from './views/types/Archive.vue';
 
 const router = createRouter ({
     history: createWebHistory(),
@@ -24,7 +25,12 @@ const router = createRouter ({
             name: 'projects.show',
             props:true,
             component: ProjectShow
-
+        },
+        {
+            path:'/type/:slug',
+            name:'types.archive',
+            props: true,
+            component: TypeArchive   
         },
         {
             path:'/contatti',
@@ -35,10 +41,7 @@ const router = createRouter ({
             path: '/:pathMatch(.*)*',
             name: 'not-found',
             component: NotFound
-
         }
-        
-
     ]
 }) 
 
