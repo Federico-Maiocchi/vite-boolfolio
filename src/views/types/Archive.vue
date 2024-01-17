@@ -16,8 +16,15 @@ import axios from 'axios';
 
         methods: {
             fetchTypeProjects() {
-                axios.get(`${ this.BASE_URL}/`)
+                axios.get(`${ this.BASE_URL}/types/${ this.slug}`)
+                .then(res => {
+                    console.log(res.data)
+                })
             }
+        },
+
+        created() {
+            this.fetchTypeProjects()
         }
     }
 </script>
