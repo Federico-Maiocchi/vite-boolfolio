@@ -26,7 +26,7 @@ export default {
                     }
                 })
                 .then((res) => {
-                    console.log(res, res.data.results.current_page, res.data.results.last_page)
+                    // console.log(res, res.data.results.current_page, res.data.results.last_page)
                     this.projects = res.data.results.data
                     this.currentPage = res.data.results.current_page
                     this.lastPage = res.data.results.last_page
