@@ -54,22 +54,29 @@ export default {
 
 <template>
     <h1>Portfolio</h1>
-
-    <div class="container">
-        <div class="row mb-2">
-            <ProjectCard 
-            v-for="project in projects" 
-            :key="project.id" 
-            :itemProject="project" />     
+    <div v-if="projects.length > 0">
+        <div class="container">
+            <div class="row mb-2">
+                <ProjectCard 
+                v-for="project in projects" 
+                :key="project.id" 
+                :itemProject="project" />     
+            </div>
+        </div>
+        <div class="container">
+            <ul class="row-pages">
+                <li v-for="item in lastPage" 
+                :class="{'active': item === page}" 
+                :key="item" @click="setPage(item)"
+                >
+                    {{ item }}
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="container">
-        <ul class="row-pages">
-            <li v-for="item in lastPage" :class="{
-          'active': item === page
-        }" :key="item" @click="setPage(item)" >{{ item }}</li>
-        </ul>
-    </div>
+    <div v-else>
+        <p class="loading">Loading...</p>
+    </div> 
 
 </template>
 

@@ -42,23 +42,26 @@ import axios from 'axios';
         <div class="container">
             <h1>{{ type.name }}</h1>
         </div>
-
         <div class="container" v-if="projects.length > 0">
-            <ul>
-                <li v-for="project in projects" :key="project.id" class="project-list-item"> 
-                    {{ project.title }}
-                </li>
-            </ul>
+            <div class="card-archive">
+                <ul>
+                    <li v-for="project in projects" :key="project.id" class="project-list-item"> 
+                        {{ project.title }}
+                    </li>
+                </ul>
+            </div>    
         </div>
         <div class="container" v-else>
             <p>Non ci sono progetti con questa TIPOLOGIA.</p>
         </div>
     </div>
     <div v-else>
-        <p>Loading...</p>
+        <p class="loading">Loading...</p>
     </div>
 </template>
 
 <style lang="scss" scoped>
-
+.card-archive {
+    background-color: white;
+}
 </style>

@@ -8,8 +8,8 @@
     <header>
         
         <div class="container">
-            <nav>
-                <ul>
+            <nav class="nav-bar">
+                <ul class="row">
                     <li>
                         <router-link :to="{ name: 'home' }">Home</router-link>
                     </li>
@@ -28,5 +28,14 @@
 </template>
 
 <style lang="scss" scoped>
+header {
+    padding: 20px 0px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.row {
+    gap: 30px;
+}
 
 </style>

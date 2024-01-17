@@ -1,4 +1,6 @@
-
+body {
+    background-color: rgb(13, 118, 223);
+}
 
 .container {
     margin: 0 auto;
@@ -30,4 +32,11 @@
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.loading {
+    font-size: 50px;
+    text-align: center;
+    margin: 0 auto;
+    width: 600px;
 }

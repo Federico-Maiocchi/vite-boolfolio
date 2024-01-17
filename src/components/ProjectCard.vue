@@ -40,7 +40,7 @@ export default {
             <div class="card-head">
                 <h3 class="mb-2"><span class="text-bold">Titolo:</span> {{ itemProject.title }}</h3>
                 <p class="mb-2"><span class="text-bold">Slug:</span> {{ itemProject.slug }} </p>
-                <p class="mb-2">
+                <p class="mb-2 cursor-pointer">
                     <span class="text-bold">Tipo:</span>
                     <router-link :to="{ name: 'types.archive', params: { slug: itemProject.type.slug } }">
                         {{ itemProject.type.name }}
@@ -54,7 +54,7 @@ export default {
                 </div>
                 <p class="mb-2"><span class="text-bold">Img:</span> {{ itemProject.img }}</p>
                 <p><span class="text-bold">Descrizione:</span> {{ itemProject.description }}</p>
-                <p>
+                <p class="cursor-pointer">
                     <router-link :to="{ name: 'projects.show', params: { slug: itemProject.slug } }">Info</router-link>
                 </p>
             </div>      
@@ -76,6 +76,7 @@ export default {
     padding: 20px;
     border: 1px solid black;
     flex:1;
+    background-color: white;
 
 }
 
