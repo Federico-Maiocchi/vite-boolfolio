@@ -18,7 +18,7 @@ import axios from 'axios';
             fetchTypeProjects() {
                 axios.get(`${ this.BASE_URL}/types/${ this.slug}`)
                 .then(res => {
-                    console.log(res.data)
+                    // console.log(res.data)
 
                     this.type = res.data.type
                     this.projects = res.data.projects.data

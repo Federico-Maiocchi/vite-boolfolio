@@ -40,7 +40,12 @@ export default {
             <div class="card-head">
                 <h3 class="mb-2"><span class="text-bold">Titolo:</span> {{ itemProject.title }}</h3>
                 <p class="mb-2"><span class="text-bold">Slug:</span> {{ itemProject.slug }} </p>
-                <p class="mb-2"><span class="text-bold">Tipo:</span> {{ itemProject.type.name }}</p>
+                <p class="mb-2">
+                    <span class="text-bold">Tipo:</span>
+                    <router-link :to="{ name: 'types.archive', params: { slug: itemProject.type.slug } }">
+                        {{ itemProject.type.name }}
+                    </router-link>    
+                </p>
             </div>
             <div class="card-body ">
                 <p class="text-bold">Tecnologia: </p>
