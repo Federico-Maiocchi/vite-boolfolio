@@ -10,13 +10,13 @@
         <div class="container">
             <nav class="nav-bar">
                 <ul class="row">
-                    <li>
+                    <li class="font-size-30">
                         <router-link :to="{ name: 'home' }">Home</router-link>
                     </li>
-                    <li>
+                    <li class="font-size-30">
                         <router-link :to="{ name: 'projects.index' }">Portfolio</router-link>
                     </li>
-                    <li>
+                    <li class="font-size-30">
                         <router-link :to="{ name: 'contacts' }">Contatti</router-link>
                     </li>
                 </ul>
@@ -36,6 +36,13 @@ header {
 
 .row {
     gap: 30px;
+    
 }
+
+.font-size-30 {
+    font-size: 30px;
+}
+
+
 
 </style>

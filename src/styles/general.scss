@@ -17,8 +17,7 @@ body {
 }
 
 .col-4 {
-    width: calc((100% / 12) * 4);
-    
+    width: calc((100% / 12) * 4); 
 }
 
 .mb-2 {
@@ -34,9 +33,18 @@ body {
     cursor: pointer;
 }
 
+.btn {
+    padding: 0px 15px;
+    line-height: 20px;
+    border-radius: 20px;
+    font-size: large;
+}
+
 .loading {
     font-size: 50px;
     text-align: center;
     margin: 0 auto;
     width: 600px;
+    color: white;
+    padding-top: 180px;
 }

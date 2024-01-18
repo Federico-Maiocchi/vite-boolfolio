@@ -45,9 +45,11 @@ import axios from 'axios';
         <div class="container" v-if="projects.length > 0">
             <div class="card-archive">
                 <ul>
-                    <li v-for="project in projects" :key="project.id" class="project-list-item"> 
-                        <h2>{{ project.title }}</h2>
-                        <p>
+                    <li v-for="project in projects" :key="project.id" class="project-list-item">
+                        <strong >Titolo:</strong> 
+                        <h2 class="mb-2">{{ project.title }}</h2>
+                        <strong >Tecnologie:</strong>
+                        <p class="mb-2">
                             {{ project.technologies.map((technology)=> technology.name).join(', ') }}
                         </p>
                     </li>
@@ -66,5 +68,10 @@ import axios from 'axios';
 <style lang="scss" scoped>
 .card-archive {
     background-color: white;
+}
+
+li {
+    border: 1px solid black;
+    padding: 10px;
 }
 </style>

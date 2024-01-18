@@ -68,7 +68,7 @@ export default {
                 <li v-for="item in lastPage" 
                 :class="{'active': item === page}" 
                 :key="item" @click="setPage(item)"
-                >
+                class="cursor-pointer num-pages ">
                     {{ item }}
                 </li>
             </ul>
@@ -87,6 +87,13 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px
+}
+
+.num-pages {
+    background-color: white;
+    padding: 2px 8px;
+    border: 2px solid black;
+    font-weight: bold;
 }
 
 
